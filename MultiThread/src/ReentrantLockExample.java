@@ -8,7 +8,7 @@ public class ReentrantLockExample {
     public void outerMethod(){
         lock.lock();
 
-         try {
+          try {
             // do something
             innerMethod();
         } catch (Exception e) {

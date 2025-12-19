@@ -76,3 +76,38 @@ public class ReadWriteLocks {
 
     }
 }
+
+
+/*
+OUTPUT
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-2 incremented
+Thread-0 reading: 0
+Thread-1 reading: 0
+Thread-0 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-0 reading: 10
+Thread-1 reading: 10
+Thread-1 reading: 10
+* */

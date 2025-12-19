@@ -71,3 +71,11 @@ class Paper {
     }
 
 }
+
+/*
+OUTPUT
+Thread2 has Paper & trying to get Pen
+Thread2 finished writing with pen
+Thread1 has pen & trying to get Paper
+Thread1 finished writing with paper
+*/

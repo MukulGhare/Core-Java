@@ -46,3 +46,13 @@ public class Main {
 
     }
 }
+
+/*
+OUTPUT
+Thread 2 Attempting to Withdraw
+Thread 1 Attempting to Withdraw
+Thread 2 Performing Withdraw
+Thread 1 Could Not acquire lock, will try again !
+Thread 2 Withdraw completed, Current Balance 500
+500
+*/
