@@ -1,3 +1,5 @@
+package BankWithdraw;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -6,24 +8,19 @@ public class BankAccount {
     private int balance;
     private final Lock lock = new ReentrantLock();
 
-    public BankAccount(){
+    public BankAccount() {
         this.balance = 1000;
-    }
-
-    public synchronized void credit(int amount){
-        // validateAmount()
-        balance = balance+amount;
     }
 
 
     //explicitLocking using Lock interface
-    public void withdraw(int amount){
+    public void withdraw(int amount) {
         System.out.println(Thread.currentThread().getName() + " Attempting Withdraw ");
 
         try {
-            if ( lock.tryLock(1000, TimeUnit.MILLISECONDS)) {
+            if (lock.tryLock(1000, TimeUnit.MILLISECONDS)) {
                 System.out.println(Thread.currentThread().getName() + " Performing Withdraw ");
-                if( balance >= amount) {
+                if (balance >= amount) {
                     try {
                         Thread.sleep(3000);
                         balance -= amount;
@@ -50,11 +47,11 @@ public class BankAccount {
 
 
     // Implicit Locking using 'synchronized'
-    public  synchronized void debit(int amount){
+    public synchronized void debit(int amount) {
 
         System.out.println(Thread.currentThread().getName() + " attempting to debit " + amount);
 
-        if ( balance >= amount){
+        if (balance >= amount) {
             try {
                 System.out.println(Thread.currentThread().getName() + " performing debit ");
                 Thread.sleep(3000);
@@ -62,7 +59,7 @@ public class BankAccount {
             }
 
             balance -= amount;
-            System.out.println(Thread.currentThread().getName() + " Debit completed. Current Balance "+balance);
+            System.out.println(Thread.currentThread().getName() + " Debit completed. Current Balance " + balance);
         } else {
             System.out.println(Thread.currentThread().getName() + " Insufficient Balance ");
         }

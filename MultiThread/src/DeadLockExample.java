@@ -39,6 +39,7 @@ class Task2 implements Runnable{
     @Override
     public void run() {
         synchronized (pen){
+            System.out.println(Thread.currentThread().getName() + " has pen");
             paper.writeWithPaper(pen);
         }
 
