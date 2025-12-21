@@ -1,10 +1,8 @@
-package ExecutorFramework;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
-public class MainClass {
+public class ExecutorExample {
 
     public static void main(String[] args) throws InterruptedException {
         long startTime = System.currentTimeMillis();
