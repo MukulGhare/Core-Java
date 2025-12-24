@@ -1,4 +1,4 @@
-package BankWithdraw;
+package MultiThread.BankWithdraw;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;

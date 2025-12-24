@@ -1,4 +1,5 @@
-package BankTransfer;
+package MultiThread.BankTransfer;
+
 
 import java.math.BigDecimal;
 

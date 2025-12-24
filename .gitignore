@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-MultiThread/out/
+src/main/java/MultiThread/out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 

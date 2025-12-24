@@ -1,3 +1,5 @@
+package MultiThread;
+
 public class Counter {
     private int count;
 

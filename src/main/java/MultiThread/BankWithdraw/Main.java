@@ -1,4 +1,4 @@
-package BankWithdraw;
+package MultiThread.BankWithdraw;
 
 public class Main {
 
@@ -13,7 +13,7 @@ public class Main {
                 sharedAccount.withdraw(500);
             }
         };
-
+    
         Thread t1 = new Thread(task,"Thread 1");
         Thread t2 = new Thread(task,"Thread 2");
         t1.start();

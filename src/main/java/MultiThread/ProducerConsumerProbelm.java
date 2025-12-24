@@ -1,4 +1,6 @@
-public class ThreadCommunication {
+package MultiThread;
+
+public class ProducerConsumerProbelm {
 
     public static void main(String[] args) {
         SharedResource resource = new SharedResource();

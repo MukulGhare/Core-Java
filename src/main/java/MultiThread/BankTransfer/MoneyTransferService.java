@@ -1,4 +1,5 @@
-package BankTransfer;
+package MultiThread.BankTransfer;
+
 
 import java.math.BigDecimal;
 import java.util.concurrent.locks.Lock;
@@ -8,7 +9,7 @@ public class MoneyTransferService {
     public void deposit(Account account, BigDecimal amount){
         validateAmount(amount);
         Lock accountLock = account.getLock();
-
+    
         accountLock.lock();
         try {
             account.deposit(amount);

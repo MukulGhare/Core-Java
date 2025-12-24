@@ -1,3 +1,5 @@
+package MultiThread;
+
 public class DeadLockExample {
 
     public static void main(String[] args) {
@@ -49,7 +51,7 @@ class Task2 implements Runnable{
 class Pen {
 
     public synchronized void writeWithPen(Paper paper){
-        System.out.println(Thread.currentThread().getName() + " has pen & trying to get Paper");
+        System.out.println(Thread.currentThread().getName() + " has pen & trying to get java.main.Paper");
         paper.finishWriting();
     }
 
@@ -62,7 +64,7 @@ class Pen {
 class Paper {
 
     public synchronized void writeWithPaper(Pen pen){
-        System.out.println(Thread.currentThread().getName() + " has Paper & trying to get Pen");
+        System.out.println(Thread.currentThread().getName() + " has java.main.Paper & trying to get java.main.Pen");
         pen.finishWriting();
     }
 
@@ -75,8 +77,8 @@ class Paper {
 
 /*
 OUTPUT
-Thread2 has Paper & trying to get Pen
+Thread2 has java.main.Paper & trying to get java.main.Pen
 Thread2 finished writing with pen
-Thread1 has pen & trying to get Paper
+Thread1 has pen & trying to get java.main.Paper
 Thread1 finished writing with paper
 */

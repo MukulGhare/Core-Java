@@ -1,4 +1,4 @@
-package BankTransfer;
+package MultiThread.BankTransfer;
 import java.math.BigDecimal;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
