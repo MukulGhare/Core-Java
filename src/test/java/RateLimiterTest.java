@@ -2,7 +2,7 @@ import RateLimiter.RateLimiterService;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class RateLimiterServiceTest {
+public class RateLimiterTest {
 
     @Test
     public void shouldAllowRequestsUptoLimit(){

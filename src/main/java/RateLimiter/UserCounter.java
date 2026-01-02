@@ -1,8 +1,5 @@
 package RateLimiter;
 
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class UserCounter {
     private long startWindow;
     private int count;

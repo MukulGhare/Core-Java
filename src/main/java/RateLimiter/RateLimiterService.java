@@ -21,7 +21,7 @@ public class RateLimiterService {
             users.put(userID,userCounter);
         }
 
-        if ( currentTime != userCounter.getStartWindow()){
+        if (currentTime != userCounter.getStartWindow()){
             userCounter.setStartWindow(currentTime);
             userCounter.resetCount();
         }
