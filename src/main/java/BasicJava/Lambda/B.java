@@ -2,8 +2,9 @@ package BasicJava.Lambda;
 
 public class B implements A{
     @Override
-    public void show() {
-        System.out.println("Class B implementation");
+    public int add(int i, int j) {
+        System.out.println("Class B implementation "+ i+j);
+        return i+j;
     }
 }
 
@@ -13,18 +14,20 @@ class M {
 
         A anon = new A(){
             @Override
-            public void show() {
-                System.out.println("Anonymous class");
+            public int add(int i, int j) {
+                System.out.println("Anonymous class "+ i+j);
+                return i+j;
             }
         };
 
-        A lam = () -> {
-            System.out.println("Lambda expression");
+        A lam = (i,j) -> {
+            System.out.println("Lambda expression "+ i+j);
+            return i+j;
         };
 
-        obj.show();
-        anon.show();
-        lam.show();
+        obj.add(2,3);
+        anon.add(2,3);
+        lam.add(2,3);
 
     }
 }

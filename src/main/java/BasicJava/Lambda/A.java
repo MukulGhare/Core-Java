@@ -2,5 +2,5 @@ package BasicJava.Lambda;
 
 public interface A {
 
-    void show();
+    int add(int i, int j);
 }
